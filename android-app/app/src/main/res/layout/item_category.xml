@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One category in the Categories popup. Icon / label / selected look are set by HomeCategoryAdapter. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="6dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp">
+
+    <FrameLayout
+        android:id="@+id/categoryCircle"
+        android:layout_width="96dp"
+        android:layout_height="104dp"
+        android:background="@drawable/bg_category">
+
+        <ImageView
+            android:id="@+id/categoryIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            app:tint="@color/home_title"
+            tools:src="@drawable/ic_handsfree" />
+
+        <ImageView
+            android:id="@+id/categoryCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_check_badge"
+            android:importantForAccessibility="no"
+            android:padding="5dp"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"
+            app:tint="@android:color/white"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/home_title"
+        android:textSize="12sp"
+        tools:text="Handsfree" />
+</LinearLayout>
